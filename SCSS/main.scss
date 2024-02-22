@@ -1,0 +1,66 @@
+:root {
+    --color-Very-Dark-Gray: hsl(0, 0%, 17%);
+    --color-Dark-Gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+// MOBILE code
+
+body {
+    width: 100%;
+    margin: 0;
+    min-height: 100svh;
+    font-size: 18px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.custom-width {
+    max-width: 375px;
+}
+
+.small {
+    font-size: 0.7rem;
+}
+.color-d-gray {
+    color: var(--color-Dark-Gray);
+}
+.color-v-d-gray {
+    color: var(--color-Very-Dark-Gray);
+}
+figcaption.small {
+    letter-spacing: 2px;
+}
