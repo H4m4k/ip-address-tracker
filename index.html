@@ -27,30 +27,47 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
-
+  <script type="module" src="/JS/main.js"></script>
 </head>
 
-<body>
+<body class="bg-body-secondary">
 
 
-  <header
-    class="container d-flex flex-column align-items-center position-absolute translate-middle-x start-50 custom-width">
+  <header class="container-fluid 
+    d-flex 
+    flex-column 
+    align-items-center 
+    position-absolute 
+    translate-middle-x 
+    start-50 
+    custom-width">
 
-    <h1 class="text-white h3">IP Address Tracker</h1>
+    <h1 class="text-white 
+    h3 
+    mb-0 mt-4">IP Address Tracker</h1>
 
 
 
-    <form action="#">
+    <form action="#" class="container-fluid 
+    col-11 col-lg-6 
+    p-0 
+    b-lg-4">
 
       <label for="ip_address"></label>
 
       <div class="input-group mb-3">
 
-        <input id="ip_address" type="text" class="form-control rounded-start-4"
-          placeholder="Search for any IP address or domain" aria-label="IP address or domain"
-          aria-describedby="button-addon2">
+        <input id="ip_address" type="text" class="form-control 
+        rounded-start-4 
+        p-3 
+        w-medium" placeholder="Search for any IP address or domain" aria-label="IP address or domain"
+          aria-describedby="button-addon2" minlength="7" maxlength="15" size="15"
+          pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" role="button">
 
-        <button class="btn btn-outline-secondary bg-black rounded-end-4" type="button" id="button-addon2">
+        <button class="btn btn-outline-secondary 
+        bg-black 
+        rounded-end-4
+        px-4" type="button" id="button-addon2">
 
           <img src="/images/icon-arrow.svg" alt="small arrow icon">
 
@@ -60,39 +77,47 @@
 
     </form>
 
-    <div class="container-fluid row d-flex flex-column gap-4 bg-white rounded-4 text-center">
+    <div class="container-fluid 
+      d-flex flex-column flex-lg-row 
+      col-11 col-lg-8 
+      bg-white 
+      rounded-4 
+      text-center 
+      align-items-center
+      justify-content-center justify-content-lg-around 
+      pt-4 pb-2">
 
-      <div class="col-11 mx-auto">
 
-        <figure>
 
-          <figcaption class="small text-uppercase fw-bold color-d-gray">IP Address</figcaption>
-          <p class="fw-bold">192.212.174.101</p>
+      <figure class="mb-0 mx-lg-1">
 
-        </figure>
+        <figcaption class="small text-uppercase fw-bold text-lg-start text--fm-Dark-Gray">IP Address</figcaption>
+        <p class="fw-bold large text--fm-v-Dark-Gray">192.212.174.101</p>
 
-        <figure>
+      </figure>
 
-          <figcaption class="small text-uppercase fw-bold color-d-gray">Location</figcaption>
-          <p class="fw-bold">Brooklyn, NY 10001</p>
+      <figure class="mb-0 mx-lg-1">
 
-        </figure>
+        <figcaption class="small text-uppercase fw-bold text-lg-start text--fm-Dark-Gray">Location</figcaption>
+        <p class="fw-bold text-wrap large text--fm-v-Dark-Gray">Brooklyn, NY 10001</p>
 
-        <figure>
+      </figure>
 
-          <figcaption class="small text-uppercase fw-bold color-d-gray">Timezone</figcaption>
-          <p class="fw-bold">UTC-05:00</p> <!-- add offset value dynamically using the API -->
+      <figure class="mb-0 mx-lg-1">
 
-        </figure>
+        <figcaption class="small text-uppercase fw-bold text-lg-start text--fm-Dark-Gray">Timezone</figcaption>
+        <p class="fw-bold large text--fm-v-Dark-Gray">UTC-05:00</p> <!-- add offset value dynamically using the API -->
 
-        <figure>
+      </figure>
 
-          <figcaption class="small text-uppercase fw-bold color-d-gray">ISP</figcaption>
-          <p class="fw-bold">SpaceX Starlink</p>
+      <figure class="mb-0 mx-lg-1">
 
-        </figure>
+        <figcaption class="small text-uppercase fw-bold text-lg-start text--fm-Dark-Gray">ISP</figcaption>
+        <p class="fw-bold text-wrap large text--fm-v-Dark-Gray fb-20">SpaceX Starlink</p>
 
-      </div>
+      </figure>
+
+
 
     </div>
 
@@ -103,9 +128,9 @@
   <main>
     <picture>
       <source media="(min-width:1000px)" srcset="/images/pattern-bg-desktop.png">
-      <img class="img-fluid w-100" src="/images/pattern-bg-mobile.png" alt="Blue map pattern">
+      <img class="img-fluid vw-100 mh-20" src="/images/pattern-bg-mobile.png" alt="Blue map pattern">
     </picture>
-    <div class="map"></div>
+    <div class="map bg-secondary"></div>
   </main>
 
 
