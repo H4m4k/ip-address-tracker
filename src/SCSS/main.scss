@@ -1,0 +1,125 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../SCSS/leaflet.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+// MOBILE code
+
+body {
+    width: 100%;
+    margin: 0;
+    min-height: 100svh;
+    font-size: 18px;
+}
+
+// ***************
+// SCSS VARIABLES
+// ***************
+
+// Frontend Mentor color map for ease of selection of colors for text and bg
+
+$colors: (
+    "v-Dark-Gray": "hsl(0, 0%, 17%)",
+    "Dark-Gray": "hsl(0, 0%, 59%)",
+);
+
+@each $name, $color in $colors {
+    .text--fm-#{$name} {
+        color: #{$color};
+    }
+    .bg--fm-#{$name} {
+        background: #{$color};
+    }
+}
+
+// List of variables to create dynamic classes similar to Bootstrap and contain its ease of use
+
+// $bases: "auto", 10, 15, 20, 25;
+// $percent: "%";
+
+// @each $base in $bases {
+//     @if $base == auto {
+//         .fb-#{$base} {
+//             flex-basis: #{$base};
+//         }
+//     } @else {
+//         .fb-#{$base} {
+//             flex-basis: #{$base}#{$percent};
+//         }
+//     }
+// }
+
+$font-size-large: revert !default;
+
+@mixin fs-larger($desktop: false) {
+    @if $desktop {
+        font-size: 1.6rem;
+    }
+}
+
+// UTILITIES
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.custom-width {
+    max-width: 375px;
+}
+
+figcaption.small {
+    letter-spacing: 1.5px;
+}
+
+.mh-20 {
+    max-height: 16rem;
+}
+
+.small {
+    font-size: 0.6rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .custom-width {
+        max-width: 1440px;
+    }
+    .large {
+        @include fs-larger($desktop: true);
+    }
+    .vertical-line {
+        border-left: 1px solid lightgrey;
+        padding-left: 2rem;
+    }
+    .info_card {
+        min-height: 8rem;
+    }
+}
