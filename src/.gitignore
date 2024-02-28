@@ -18,6 +18,10 @@
 *.css.map
 *.sass.map
 *.scss.map
+node_modules
+package*.json
+vite.config.js
+
 
 # enviroment variables
 .env
