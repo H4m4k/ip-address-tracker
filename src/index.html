@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- BOOTSTRAP -->
@@ -40,7 +43,8 @@
     position-absolute 
     translate-middle-x 
     start-50 
-    custom-width">
+    custom-width
+    z-1">
 
     <h1 class="text-white 
     h3 
@@ -130,7 +134,7 @@
       <source media="(min-width:1000px)" srcset="/images/pattern-bg-desktop.png">
       <img class="img-fluid vw-100 mh-20" src="/images/pattern-bg-mobile.png" alt="Blue map pattern">
     </picture>
-    <div class="map bg-secondary"></div>
+    <div id="map" class="map bg-secondary z-0"></div>
   </main>
 
 

@@ -22,4 +22,3 @@ const API = new fetchWrapper("https://geo.ipify.org/api/");
 // Optional. IPv4 or IPv6 to search location by.
 
 // If the parameter is not specified, then it defaults to client request's public IP address.
-// **at_njfhKTlrrwuKrd28LYnFyxLvHZ2uc**
