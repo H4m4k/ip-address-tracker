@@ -30,14 +30,13 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script> -->
-  <script type="module" src="/JS/main.js"></script>
 </head>
 
 <body class="bg-body-secondary">
 
 
   <header class="container-fluid 
-    d-flex 
+  d-flex 
     flex-column 
     align-items-center 
     position-absolute 
@@ -62,14 +61,14 @@
       <div class="input-group mb-3">
 
         <input id="ip_address" type="text" class="form-control 
-        rounded-start-4 
-        p-3 
-        w-medium" placeholder="Search for any IP address or domain" aria-label="IP address or domain"
+      rounded-start-4 
+      p-3 
+      w-medium" placeholder="Search for any IP address or domain" aria-label="IP address or domain"
           aria-describedby="button-addon2" minlength="7" maxlength="15" size="15"
           pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" role="button">
 
-        <button class="btn btn-outline-secondary 
-        bg-black 
+        <button id="checkIp" class="btn btn-outline-secondary 
+          bg-black 
         rounded-end-4
         px-4" type="button" id="button-addon2">
 
@@ -82,11 +81,11 @@
     </form>
 
     <div class="info_card container-fluid 
-      d-flex flex-column flex-lg-row 
-      col-11 col-lg-8 
-      bg-white 
-      rounded-4 
-      text-center 
+    d-flex flex-column flex-lg-row 
+    col-11 col-lg-8 
+    bg-white 
+    rounded-4 
+    text-center 
       align-items-center
       justify-content-center justify-content-lg-around 
       pt-4 pb-3">
@@ -145,6 +144,8 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </footer>
+
+  <script type="module" src="./JS/main.js" async></script>
 
 </body>
 

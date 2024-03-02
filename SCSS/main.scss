@@ -1,5 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
-@import "../SCSS/leaflet.scss";
+@import '~bootstrap/scss/bootstrap';
+@import '/SCSS/leaflet.scss';
 
 *,
 *::before,
@@ -35,7 +35,7 @@ body {
     margin: 0;
     min-height: 100svh;
     font-size: 18px;
-    font-family: "Rubik", sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 // ***************
@@ -45,8 +45,8 @@ body {
 // Frontend Mentor color map for ease of selection of colors for text and bg
 
 $colors: (
-    "v-Dark-Gray": "hsl(0, 0%, 17%)",
-    "Dark-Gray": "hsl(0, 0%, 59%)",
+    'v-Dark-Gray': 'hsl(0, 0%, 17%)',
+    'Dark-Gray': 'hsl(0, 0%, 59%)',
 );
 
 @each $name, $color in $colors {
@@ -102,7 +102,7 @@ figcaption.small {
 }
 
 .mh-20 {
-    max-height: 16rem;
+    max-height: 20svh;
 }
 
 .small {
