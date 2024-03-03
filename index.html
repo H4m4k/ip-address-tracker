@@ -47,7 +47,7 @@
 
     <h1 class="text-white 
     h3 
-    mb-2 mt-4">IP Address Tracker</h1>
+    mb-2 mt-3 mt-lg-4">IP Address Tracker</h1>
 
 
 
@@ -65,7 +65,8 @@
       p-3 
       w-medium" placeholder="Search for any IP address or domain" aria-label="IP address or domain"
           aria-describedby="button-addon2" minlength="7" maxlength="15" size="15"
-          pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" role="button">
+          pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" role="button"
+          value="8.8.8.8">
 
         <button id="checkIp" class="btn btn-outline-secondary 
           bg-black 
@@ -88,28 +89,29 @@
     text-center 
       align-items-center
       justify-content-center justify-content-lg-around 
-      pt-4 pb-3">
+      pt-2 pt-lg-4 pb-1 pb-lg-3
+      mobile-fade ">
 
 
 
       <figure class="mb-0 mx-lg-1 text-lg-start">
 
         <figcaption class="small text-uppercase fw-bold text--fm-Dark-Gray">IP Address</figcaption>
-        <p id="info_ip" class="fw-bold large text--fm-v-Dark-Gray">192.212.174.101</p>
+        <p id="info_ip" class="fw-bold large text--fm-v-Dark-Gray mb-1">192.212.174.101</p>
 
       </figure>
 
       <figure class="mb-0 mx-lg-1 vertical-line text-lg-start">
 
         <figcaption class="small text-uppercase fw-bold  text--fm-Dark-Gray">Location</figcaption>
-        <p id="info_location" class="fw-bold text-wrap large text--fm-v-Dark-Gray">Brooklyn, NY 10001</p>
+        <p id="info_location" class="fw-bold text-wrap large text--fm-v-Dark-Gray mb-1">Brooklyn, NY 10001</p>
 
       </figure>
 
       <figure class="mb-0 mx-lg-1 vertical-line text-lg-start">
 
         <figcaption class="small text-uppercase fw-bold text--fm-Dark-Gray">Timezone</figcaption>
-        <p id="info_timezone" class="fw-bold large text--fm-v-Dark-Gray">UTC-05:00</p>
+        <p id="info_timezone" class="fw-bold large text--fm-v-Dark-Gray mb-1">UTC-05:00</p>
         <!-- add offset value dynamically using the API -->
 
       </figure>
@@ -117,7 +119,7 @@
       <figure class="mb-0 mx-lg-1 vertical-line text-lg-start">
 
         <figcaption class="small text-uppercase fw-bold text--fm-Dark-Gray">ISP</figcaption>
-        <p id="info_isp" class="fw-bold text-wrap large text--fm-v-Dark-Gray">SpaceX Starlink</p>
+        <p id="info_isp" class="fw-bold text-wrap large text--fm-v-Dark-Gray mb-1">SpaceX Starlink</p>
 
       </figure>
 

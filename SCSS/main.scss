@@ -83,6 +83,20 @@ $font-size-large: revert !default;
     }
 }
 
+.mobile-fade {
+    transition-delay: 2s;
+    transition: opacity 2s;
+    opacity: 0.05;
+}
+
+.mobile-fade:hover {
+    opacity: 1;
+}
+
+.mobile-fade:focus {
+    opacity: 1;
+}
+
 // UTILITIES
 .attribution {
     font-size: 11px;
@@ -122,5 +136,8 @@ figcaption.small {
     }
     .info_card {
         min-height: 8rem;
+    }
+    .mobile-fade {
+        opacity: 1;
     }
 }
