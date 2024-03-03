@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- BOOTSTRAP -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+  <!-- SCSS -->
+  <!-- <link rel="stylesheet" href="/SCSS/main.css"> -->
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP JS -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script> -->
+</head>
+
+<body class="bg-body-secondary">
+
+
+  <header class="container-fluid 
+  d-flex 
+    flex-column 
+    align-items-center 
+    position-absolute 
+    translate-middle-x 
+    start-50 
+    custom-width
+    z-1">
+
+    <h1 class="text-white 
+    h3 
+    mb-2 mt-3 mt-lg-4">IP Address Tracker</h1>
+
+
+
+    <form action="#" class="container-fluid 
+    col-11 col-lg-6 
+    p-0 
+    mb-lg-4">
+
+      <label for="ip_address"></label>
+
+      <div class="input-group mb-3">
+
+        <input id="ip_input" type="text" class="form-control 
+      rounded-start-4 
+      p-3 
+      w-medium" placeholder="Search for any IP address or domain" aria-label="IP address or domain"
+          aria-describedby="button-addon2" minlength="7" maxlength="15" size="15"
+          pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" role="button"
+          value="8.8.8.8">
+
+        <button id="checkIp" class="btn btn-outline-secondary 
+          bg-black 
+        rounded-end-4
+        px-4" type="button" id="button-addon2">
+
+          <img src="/images/icon-arrow.svg" alt="small arrow icon">
+
+        </button>
+
+      </div>
+
+    </form>
+
+    <div class="info_card container-fluid 
+    d-flex flex-column flex-lg-row 
+    col-11 col-lg-8 
+    bg-white 
+    rounded-4 
+    text-center 
+      align-items-center
+      justify-content-center justify-content-lg-around 
+      pt-2 pt-lg-4 pb-1 pb-lg-3
+      mobile-fade ">
+
+
+
+      <figure class="mb-0 mx-lg-1 text-lg-start">
+
+        <figcaption class="small text-uppercase fw-bold text--fm-Dark-Gray">IP Address</figcaption>
+        <p id="info_ip" class="fw-bold large text--fm-v-Dark-Gray mb-1">192.212.174.101</p>
+
+      </figure>
+
+      <figure class="mb-0 mx-lg-1 vertical-line text-lg-start">
+
+        <figcaption class="small text-uppercase fw-bold  text--fm-Dark-Gray">Location</figcaption>
+        <p id="info_location" class="fw-bold text-wrap large text--fm-v-Dark-Gray mb-1">Brooklyn, NY 10001</p>
+
+      </figure>
+
+      <figure class="mb-0 mx-lg-1 vertical-line text-lg-start">
+
+        <figcaption class="small text-uppercase fw-bold text--fm-Dark-Gray">Timezone</figcaption>
+        <p id="info_timezone" class="fw-bold large text--fm-v-Dark-Gray mb-1">UTC-05:00</p>
+        <!-- add offset value dynamically using the API -->
+
+      </figure>
+
+      <figure class="mb-0 mx-lg-1 vertical-line text-lg-start">
+
+        <figcaption class="small text-uppercase fw-bold text--fm-Dark-Gray">ISP</figcaption>
+        <p id="info_isp" class="fw-bold text-wrap large text--fm-v-Dark-Gray mb-1">SpaceX Starlink</p>
+
+      </figure>
+
+
+
+    </div>
+
+
+
+  </header>
+
+  <main>
+    <picture>
+      <source media="(min-width:1000px)" srcset="/images/pattern-bg-desktop.png">
+      <img class="img-fluid vw-100 mh-20" src="/images/pattern-bg-mobile.png" alt="Blue map pattern">
+    </picture>
+    <div id="map" class="map bg-secondary z-0"></div>
+  </main>
+
+
+  <footer class="position-absolute bottom-0 bg-light-subtle start-50 translate-middle-x">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend
+        Mentor</a>.
+      Coded by <a href="#">Paweł</a>.
+    </div>
+  </footer>
+
+  <script type="module" src="./JS/main.js" async></script>
+</body>
+
+</html>
